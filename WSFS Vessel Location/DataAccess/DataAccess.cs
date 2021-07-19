@@ -22,7 +22,7 @@ namespace WSFSVesselLocation
         }
 
         /// <summary>
-        /// This takes an array of basic vessel info in the shape of ApiModels.VesselBasicInfo
+        /// This takes an array of vessel location in the shape of ApiModels.VesselLocationInfo
         /// from the WSFS API http://www.wsdot.wa.gov/Ferries/API and saves to db
         /// </summary>
         /// <param name="vesselBasicInfoApiResponse">json string</param>
