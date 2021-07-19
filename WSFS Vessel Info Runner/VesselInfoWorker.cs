@@ -53,13 +53,13 @@ namespace WSFS_Vessel_Info_Worker
 
                     //post to our vessel info service to save the data
                     var saveResult = await client.PostAsync(saveInfoUrl, new StringContent(result, Encoding.UTF8, "application/json"));
-
-                    await Task.Delay(delay, stoppingToken);
                 }
                 catch(Exception ex)
                 {
                     _logger.LogError(ex.Message);
                 }
+
+                await Task.Delay(delay, stoppingToken);
             }
         }
     }

@@ -51,14 +51,13 @@ namespace WSFS_Vessel_Location_Runner
 
                     //post to our vessel location service to save
                     var saveResult = await client.PostAsync(saveLocationUrl, new StringContent(result, Encoding.UTF8, "application/json"));
-
-                    await Task.Delay(delay, stoppingToken);
-
                 }
                 catch (Exception ex)
                 {
                     _logger.LogError(ex.Message);
                 }
+
+                await Task.Delay(delay, stoppingToken);
             }
         }
     }
