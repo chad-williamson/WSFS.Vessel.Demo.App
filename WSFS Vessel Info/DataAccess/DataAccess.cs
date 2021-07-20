@@ -45,9 +45,9 @@ namespace WSFSVesselLocation
                     {
                         _vesselInfoContext.VesselInfos.Add(new VesselInfo { Id = vbi.VesselID, Name = vbi.VesselName, Status = vbi.Status });
                     }
-
-                    await _vesselInfoContext.SaveChangesAsync();
                 }
+
+                await _vesselInfoContext.SaveChangesAsync();
             }
             catch (Exception ex)
             {

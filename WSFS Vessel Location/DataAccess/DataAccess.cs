@@ -48,9 +48,9 @@ namespace WSFSVesselLocation
                     {
                         _vesselLocationContext.VesselLocations.Add(new VesselLocation { Id = vli.VesselID, Heading = vli.Heading, Latitude = vli.Latitude, Longitude = vli.Longitude });
                     }
-
-                    await _vesselLocationContext.SaveChangesAsync();
                 }
+
+                await _vesselLocationContext.SaveChangesAsync();
             }
             catch (Exception ex)
             {
